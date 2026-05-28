@@ -48,7 +48,7 @@ Open-Meteo REST API
   (24-hr ahead, 95% prediction intervals)
         │
         ▼
-  Shiny Dashboard (reactive, live refresh)
+  Shiny Dashboard (reactive, live refresh) ~ AI assistance
 ```
 
 ---
