@@ -53,7 +53,7 @@ Raw Compensation Dataset
   └── Correlation analysis
         │
         ▼
-  Shiny Dashboard
+  Shiny Dashboard (AI assistance)
   (interactive filters + visualizations)
 ```
 
