@@ -1,23 +1,40 @@
-# Raafay Riaz Qazi — Data Science Portfolio
+Game Recommendation System
+A content-based game recommendation engine built in R — scraping live data from the RAWG Video Games Database API, engineering rich features, and serving personalized recommendations through an interactive Shiny dashboard.
+🚀 Live App
+----------------------------------------------------------------
+Overview
+This project tackles a real product problem: given a game a user enjoys, recommend similar titles from a catalogue of 400+ games using content-based filtering. The system combines API-scraped metadata, custom feature engineering, and TF-IDF cosine similarity to generate ranked recommendations — all served through a deployed multi-tab web app.
+RAWG REST API (400+ games)
+        │
+        ▼
+  API Scraping (httr, pagination)
+        │
+        ▼
+  Data Cleaning & Preprocessing
+  (missing values, type normalization)
+        │
+        ▼
+  Feature Engineering
+  ├── Bayesian-weighted score
+  ├── Popularity tier classification
+  ├── Playtime bucketing
+  └── Genre/platform/tag encoding
+        │
+        ▼
+  TF-IDF Vectorization
+  (on combined text features)
+        │
+        ▼
+  Cosine Similarity Matrix
+        │
+        ▼
+  Shiny Dashboard
+  (recommendations + trend visualizations)
+----------------------------------------------------------------
 
-Final-year BSc Data Science student at Simon Fraser University.
-This repository contains my data science, ML, and software projects.
+  The engine uses content-based filtering via TF-IDF cosine similarity:
 
-## Projects
-
-| Project | Tech | Live Demo |
-|---------|------|-----------|
-| Weather Forecasting App | R, Shiny, Linear Regression, REST API | https://lnkd.in/g-QtNsWi |
-| Game Recommendation System | R, Shiny, TF-IDF, RAWG API | https://rafpk.shinyapps.io/game_recommendation_system/ |
-| Salaries & Jobs Analysis | R, Shiny, SQL, EDA | https://rafpk.shinyapps.io/jobs_project/|
-| Bioplastic ANOVA Study | R, Experimental Design, ANOVA | — |
-| B-Tree Implementation | C++17, Data Structures | — |
-
-## Skills
-Languages: Python, R, SQL, C++
-Libraries: Pandas, Scikit-learn, Shiny, Plotly, tidyverse
-Data: ETL pipelines, EDA, regression, ML, dashboarding
-Tools: Excel, Git, PowerPoint
-
-
-LinkedIn~raafay-riaz-q 
+Feature construction — each game's genres, tags, platforms, and descriptions are combined into a single text representation
+TF-IDF vectorization — transforms text features into weighted term-frequency vectors
+Cosine similarity — computes pairwise similarity scores across all 400+ games
+Ranking — top-N most similar games returned, re-ranked by Bayesian-weighted score to balance similarity with quality
