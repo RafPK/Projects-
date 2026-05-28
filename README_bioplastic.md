@@ -63,9 +63,7 @@ This project addresses a practical materials science question: *which formulatio
 ## Files
 
 ```
-bioplastic_anova/
-├── analysis.R          # Full R analysis script (power analysis, ANOVA, diagnostics)
-├── report.Rmd          # R Markdown source for the formal report
+bioplastic_anova/\
 ├── report.pdf          # Compiled formal report
 ├── data/
 │   └── bioplastic.csv  # Raw flexibility measurements
