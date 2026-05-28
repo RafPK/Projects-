@@ -52,7 +52,7 @@ RAWG REST API (400+ games)
   Cosine Similarity Matrix
         │
         ▼
-  Shiny Dashboard
+  Shiny Dashboard (AI assistance)
   (recommendations + trend visualizations)
 ```
 
