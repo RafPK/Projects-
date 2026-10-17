@@ -1,0 +1,53 @@
+name: Review Intelligence demo / commercial inquiry
+description: Ask about a demo, private review analysis, or a business use case.
+title: "[Review Intelligence] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your interest in Review Intelligence.
+
+        **Please do not attach confidential reviews, customer exports, personal information, API keys, or other sensitive data to this public GitHub issue.**
+
+  - type: dropdown
+    id: inquiry_type
+    attributes:
+      label: What are you interested in?
+      options:
+        - Product demo
+        - One-time review analysis
+        - Recurring review monitoring
+        - Private/local deployment
+        - Consulting/customization
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: organization_type
+    attributes:
+      label: Organization / use case
+      description: A short description is enough. Do not include confidential information.
+      placeholder: "Example: multi-location restaurant group"
+
+  - type: input
+    id: approximate_volume
+    attributes:
+      label: Approximate review volume
+      placeholder: "Example: 5,000 reviews"
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: What would you like to learn from the reviews?
+      placeholder: "Example: identify recurring delivery complaints and compare locations"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy acknowledgement
+      options:
+        - label: I will not post confidential customer data in this public issue.
+          required: true
